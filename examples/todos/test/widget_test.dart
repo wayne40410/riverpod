@@ -117,7 +117,7 @@ void main() {
     await tester.pumpWidget(const ProviderScope(child: MyApp()));
 
     expect(
-      find.descendant(of: firstItem, matching: find.text('hi')),
+      find.descendant(of: firstItem, matching: find.text('hello')),
       findsOneWidget,
     );
 
@@ -132,7 +132,7 @@ void main() {
     await tester.pump();
 
     expect(
-      find.descendant(of: firstItem, matching: find.text('hi')),
+      find.descendant(of: firstItem, matching: find.text('hello')),
       findsNothing,
     );
     expect(
